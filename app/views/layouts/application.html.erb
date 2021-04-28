@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= yield(:title) %> | Awesome Blog </title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <%= render 'layouts/header' %>
+  <div class="container pt-10 mb-0">
+      <%= render "shared/error_messages"%>
+  </div>
+    <div class="container p-4 mt-4 ">
+    <%= yield %>
+    </div>
+  </body>
+</html>

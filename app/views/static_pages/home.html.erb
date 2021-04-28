@@ -1,0 +1,22 @@
+<% provide(:title, 'Home') %>
+<% if logged_in? %>
+    <div class="row">
+        <aside class="col-3">
+            <section>
+                <%= render 'shared/user_info'%>
+            </section>
+            <section>
+                <%= render 'shared/micropost_form'%>
+            </section>
+        </aside>
+        <div class="col-9">
+            <h3>Micropost Feed</h3>
+            <%= render 'shared/feed' %>
+        </div>
+    </div>
+<% else %>
+    <div class="content jumpbotron">
+        <h1 class="text-center"> <strong>Awesome Blog</strong><h1>
+        <p class="text-center">Welcome to Awesome Blog!</p>
+    </div>
+<% end %>
