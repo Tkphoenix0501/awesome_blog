@@ -1,4 +1,5 @@
-<li class="col-12 my 4">
+<li class="col-12 my-4">
+    <div class="micropostline">
     <%= link_to gravatar_for(feed_item.user), feed_item.user %>
     <span class="user">
         <%= link_to feed_item.user.name, feed_item.user %>
@@ -12,4 +13,5 @@
         data: {confirm: "Are you sure?"},
         title: feed_item.content %>
         <% end %>
+    </div>
 </li>

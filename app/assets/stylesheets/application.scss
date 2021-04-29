@@ -1,11 +1,50 @@
 @import "bootstrap";
 .alert{
-    font-size: 60px;
+    font-size: 30px;
+    text-align: center;
 }
+.form-h1{
+    padding-top: 30px;
+    font-size: 20px;
+}
+.from .user{
+    margin-bottom: 3px ;
+}
+.itemstanp{
+    font-size: 10px;
+}
+
+ol, ul{
+    list-style: none;
+}
+.container .row .col-4{
+    border-style: double;
+    padding-top: 10px;
+}
+.container .row .col-4 h1{
+    font-size: 20px;
+}
+.container .row .col-8{
+    border-style: double;
+    padding-top: 10px;
+}
+.line {
+    padding-top: 15px;
+    border-top-style: solid;
+    border-color: gray;
+}
+.micropostline{
+    border-top-style: solid;
+    border-color: gray;
+}
+
 // .container{
 //     padding-top: 30px;
-//     border: blue;
+//     text-align: center;
+//     color: purple;
 // }
+
+
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files

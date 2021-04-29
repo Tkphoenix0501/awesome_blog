@@ -1,6 +1,10 @@
-<li class="col-12 my-4">
-    <%= link_to gravatar_for(user), user %>
-    <span>
-        <%= link_to user.name, user %>
-    </span>
-</li>
+<div class="container">
+    <div class="row">
+        <div class="col-4 my-4">
+            <%= link_to gravatar_for(user), user %>
+        </div>
+        <div class="col-8 my-4">
+            <%= link_to user.name, user %>
+        </div>
+    </div>
+</div>
