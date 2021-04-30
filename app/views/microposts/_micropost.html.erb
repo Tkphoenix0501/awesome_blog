@@ -1,11 +1,16 @@
 <li class="microposts-item" >
     <h4> <%= micropost.content %> </h4>
+    <%= pluralize(micropost.likes.count, "like") %>
+    <%= link_to raw("<i class='fa fa-thumbs-up'></i>"), like_micropost_path(micropost) %>
+    <%= link_to raw("<i class='fa fa-thumbs-down text-danger'></i>"), dislike_micropost_path(micropost) %> <br>
+
     <span class="timestamp">
         Posted <%= time_ago_in_words(micropost.created_at)%> ago.
     </span>
     <% if current_user?(micropost.user) %>
-        <%= link_to "delete", micropost, method: :delete,
+        <%= link_to raw("<i class='fa fa-trash text-success'></i>"), micropost, method: :delete,
         data: {confirm: "Are you sure?"},
         title: micropost.content %>
     <% end %>
 </li>
+

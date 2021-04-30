@@ -1,4 +1,7 @@
 @import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
 .alert{
     font-size: 30px;
     text-align: center;
@@ -33,11 +36,19 @@ ol, ul{
     border-top-style: solid;
     border-color: gray;
 }
-.micropostline{
+.microposts-item{
     border-top-style: solid;
     border-color: gray;
 }
-
+.microposts{
+    height: 400px;
+    overflow-y: scroll;
+}
+.micropostline{
+    border-top-style: solid;
+    border-color: gray;
+    padding-top: 1px;
+}
 // .container{
 //     padding-top: 30px;
 //     text-align: center;

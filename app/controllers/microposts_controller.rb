@@ -17,6 +17,22 @@ class MicropostsController < ApplicationController
         redirect_to root_url
     end
 
+    def like
+        @topic = Micropost.find(params[:id])
+        @topic.likes.create
+
+        redirect_to root_url
+    end
+
+    def dislike
+        @topic = Micropost.find(params[:id])
+        if @topic.likes.first.nil? == false
+           @topic.likes.first.destroy
+        end
+        redirect_to root_url
+    end
+
+
 
     private
     def micropost_params
